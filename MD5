@@ -1,0 +1,10 @@
+6c449df77b83c3cb065816c144e798ad *DESCRIPTION
+02cb45751479a2235817accbe1fd97e4 *NAMESPACE
+fb6b2bebc0661c52152778a4e6d93e92 *R/findPeak.R
+c708568029a4834937bfb16048f44274 *R/kdeC.R
+feccf19a4ad2aea6b04729eb56546ef2 *R/plot2d.R
+ba4be31e3b7d4d0dc067e29dcff7e5ae *man/findPeak.Rd
+cb7279219caa6ddfef1624cc3c6e0d1a *man/kdeC.Rd
+59f23fa2a3f94ff9ee0697b64da03ad4 *man/plot2d.Rd
+3f96c4f7a993ef5656668d5b070b8b54 *src/init.c
+d3dc9be19a9df2a420325195450fcb55 *src/kde.c

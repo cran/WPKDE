@@ -1,0 +1,8 @@
+useDynLib(WPKDE, .registration = TRUE)
+
+importFrom("graphics", "par", "plot")
+
+export(kdeC)
+export(findPeak)
+export(plot2d)
+
