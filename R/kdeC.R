@@ -1,13 +1,23 @@
-#two-dimension fast weighted kernel density estimation
-#function kdeC(x,H,gridsize,cutNum,w)
-#parameters
-#x - data points in the format n*2 matrix
-#H - bandwidth, a vector containing 2 num values
-#gridsize - number of points for each direction, a vector containing 2 int values
-#cutNum - number of pieces to be cutted for each direction, a vector containing 2 int values
-#w - weight, a vector corresponding to parameter 'x'
-#Returns
-#result - a list containing 3 elements, result$estimate,result$evalpointsX and result$evalpointsY
+#' Two-dimensional fast weighted kernel density estimation
+#'
+#' @param x Data points in the format of an n x 2 matrix.
+#' @param H Bandwidth, a vector containing 2 numeric values.
+#' @param gridsize Number of points for each direction, a vector containing 2 integer values.
+#' @param cutNum Number of pieces to be cut for each direction, a vector containing 2 integer values.
+#' @param w Weight, a vector corresponding to parameter 'x'.
+#'
+#' @return A list containing three elements:
+#'   \item{estimate}{The estimated values of the kernel density.}
+#'   \item{evalpointsX}{The evaluation points along the X direction.}
+#'   \item{evalpointsY}{The evaluation points along the Y direction.}
+#' @import Rcpp
+#' @useDynLib WPKDE, .registration = TRUE
+#' @importFrom Rcpp sourceCpp
+#' @export
+#'
+#' @examples
+#' data(r)
+#' k <- kdeC(r$dat, H = c(0.014, 0.014), gridsize = c(330, 330), cutNum = c(1, 1), w = r$z)
 kdeC<-function(x,H,gridsize,cutNum,w){
   if(missing(x)){
     stop("can not miss the first argument 'x'.\n")
